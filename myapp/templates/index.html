@@ -1,0 +1,24 @@
+<!-- index.html -->
+{% extends 'base.html' %}
+
+{% load static %}  
+
+{% block content %}
+    <h1>Welcome to My App</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{% static 'img/havel.jpg' %}" alt="Photo 1" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'img/janacek.jpg' %}" alt="Photo 2" class="img-fluid">
+        </div>
+    </div>
+    <h2>Flights:</h2>
+    <ul>
+        {% for flight in flights %}
+            <li>{{ flight }}</li>
+        {% empty %}
+            <li>No flights available.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

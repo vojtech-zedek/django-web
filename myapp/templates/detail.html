@@ -1,0 +1,17 @@
+<!-- detail.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Agency Details</h1>
+    <div class="card">
+        <div class="card-body">
+            <h3>{{ agency.name }}</h3>
+            <p>City: {{ agency.city }}</p>
+            <p>Postal Code: {{ agency.postal_code }}</p>
+            <p>Street: {{ agency.street }}</p>
+            <p>Street Number: {{ agency.street_number }}</p>
+            <p>Email: {{ agency.email }}</p>
+            <p>Phone: {{ agency.phone }}</p>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,16 @@
+<!-- overview.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Agency Overview</h1>
+    <div class="row">
+        {% for agency in agencies %}
+            <div class="col-md-3">
+                <img src="{{ agency.logo.url }}" alt="{{ agency.name }}" class="img-fluid">
+                <h4>{{ agency.name }}</h4>
+            </div>
+        {% empty %}
+            <p>No agencies available.</p>
+        {% endfor %}
+    </div>
+{% endblock %}
